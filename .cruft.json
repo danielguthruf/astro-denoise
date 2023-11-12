@@ -1,0 +1,32 @@
+{
+  "template": "https://github.com/radix-ai/poetry-cookiecutter",
+  "commit": "0ebc888c020aad416bcca536e5f828545706f490",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "package_name": "astro-denoise",
+      "package_description": "DL-Denoising for astrophotography",
+      "package_url": "https://github.com/danielguthruf/astro-denoise",
+      "author_name": "Daniel Guthruf",
+      "author_email": "guthrufdaniel@gmail.com",
+      "python_version": "3.9",
+      "docker_image": "python:$PYTHON_VERSION-slim",
+      "development_environment": "simple",
+      "with_conventional_commits": "0",
+      "with_fastapi_api": "0",
+      "with_jupyter_lab": "0",
+      "with_pydantic_typing": "0",
+      "with_sentry_logging": "0",
+      "with_streamlit_app": "0",
+      "with_typer_cli": "0",
+      "continuous_integration": "GitHub",
+      "docstring_style": "Google",
+      "private_package_repository_name": "",
+      "private_package_repository_url": "",
+      "__package_name_kebab_case": "astro-denoise",
+      "__package_name_snake_case": "astro_denoise",
+      "_template": "https://github.com/radix-ai/poetry-cookiecutter"
+    }
+  },
+  "directory": null
+}
