@@ -1,18 +1,14 @@
 import os
 
 
-def get_data_dict(data_folders):
-    if isinstance(data_folders, str):
-        data_folders = [data_folders]
-
-    data_dict = {"train": [], "validation": [], "test": []}
-
-    for data_folder in data_folders:
-        data_folder_path = os.path.join("../data/processed", data_folder)
-        print(data_folder_path)
+def get_data_dict(data: list) -> dict:
+    data_dict: dict = {"train": [], "validation": [], "test": []}
+    for d in data:
+        data_path = os.path.join("./data/processed", d)
+        print(data_path)
 
         for split in ["train", "validation", "test"]:
-            split_folder_path = os.path.join(data_folder_path, split)
+            split_folder_path = os.path.join(data_path, split)
 
             if os.path.exists(split_folder_path):
                 file_paths = [

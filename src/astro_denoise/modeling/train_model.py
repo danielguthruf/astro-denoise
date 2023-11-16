@@ -1,10 +1,12 @@
-import argparse
+import hydra
+from omegaconf import DictConfig
 
 from astro_denoise.modeling.utils import initalizer
 
 
-def main():
-    initalizer(config, mode="training")
+@hydra.main(version_base=None, config_path="../../../conf", config_name="config")
+def main(cfg: DictConfig) -> None:
+    initalizer(cfg)
     # initalize dataset
     # initalize loader
     # initalize factories
@@ -12,9 +14,4 @@ def main():
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Argument Parser")
-
-    parser.add_argument(
-        "--config", type=str, default="default", help="name of you config file yaml"
-    )
-    args = parser.parse_args()
+    main()
